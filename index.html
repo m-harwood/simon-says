@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!---------------------------Viewport--------------------------------->
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!------------------- Bootstrap & Fontawesome CSS --------------------->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
+
+
+
+	<!---------------------------Audio--------------------------------->
+
+	<audio id="clip1">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+  	</audio>
+	<audio id="clip2">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+  	</audio>
+	<audio id="clip3">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+  	</audio>
+	<audio id="clip4">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+  	</audio>
+
+	<title>Simon JS</title>
+
+</head>
+
+<body>
+	<header>
+		<nav class="container-fluid">
+			<ul>
+				<li class="main-nav nav-item-transition">About</li>
+				<li class="main-nav nav-item-transition">Simon Wiki</li>
+				<li class="main-nav nav-item-transition">GitHub</li>
+				<li class="main-nav nav-item-transition">Contact</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="container-fluid">
+		<div id="outer-circle">
+			<div id="topleft"></div>
+			<div id="topright"></div>
+			<div id="bottomleft"></div>
+			<div id="bottomright"></div>
+			<div id="inner-circle">
+				<div id="title" class="font-effect-emboss">SIMON!</div>
+				<div id="switches">
+					<input type="checkbox" class="toggle" id="on">
+					<button class="button" id="start">Start</button>
+					<input type="checkbox" class="toggle" id="strict">
+				</div>
+				<div class="text1">
+					<span>POWER</span><span>STRICT</span>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container-fluid" id="turn">
+			<div class="text2">
+				Round
+			</div>
+		</div>
+		<img class="logo" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F36%2FHasbro_4c_no_R.png%2F1200px-Hasbro_4c_no_R.png&f=1"></img>
+
+	</div>
+
+	<!---------------------------JS--------------------------------->
+
+	<script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
