@@ -1,8 +1,7 @@
-**Your Project's Name**
+<h1>**Simon!**</h1>
 
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+My project is the simon game as developed by Hasbro. I have made it as accurate to the original game as I think I can and am very happy with the outcome.
+I have added wiki links to the game and to hasbro and also to my GitHub. I added a way to contact me with ideas or anything 
 
 **UX**
 
@@ -68,6 +67,6 @@ In addition, if it is not obvious, you should also describe how to run your code
 Content
 The text for section Y was copied from the Wikipedia article Z
 Media
-The photos used in this site were obtained from the Hasbro Wiki and 
+The photos used in this site were obtained from the Hasbro Wiki.
 Acknowledgements
-I received inspiration for this project from kellyking who had a nice, simple tutorial which I based the intial design from.
+I received inspiration for this project from kellyking and Code Planet who had a nice, simple tutorials which I based the intial design from. <a href="https://codeplanet.io/building-simon-says-javascript/">https://codeplanet.io/building-simon-says-javascript/</a>

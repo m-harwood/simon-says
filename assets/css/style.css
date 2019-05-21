@@ -1,29 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=cursive|Open+Sans:300');
-
-/*-----------------------------------------------Full Site     */
+/*-----------------------------------------------Full Site       */
 
 html {
-    font-family: 'cursive', sans-serif;
+    font-family: 'Baloo Bhai', cursive;
 }
 
 body {
-    background-image:url("/images/bgrepeat.jpg");
+    background-image: url("/images/hasbrobg.png");
     height: 100vh;
     width: 100vw;
     position: fixed;
     background-size: cover;
 }
 
-/*------------------------------------------ Nav Bar  */
+/*------------------------------------------ Nav Bar             */
 
 .main-nav {
     display: inline;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
+    font-family: 'Baloo Bhai', cursive;
 }
 
-/*------------------------------------------ Transitions/  */
+/*------------------------------------------ Transitions/Hover states  */
 
 .nav-item-transition {
     padding: 1em;
@@ -32,6 +31,11 @@ body {
     left: 0;
     background-color: #99ccff;
     position: relative;
+}
+
+.nav-item-transition:active {
+    left: 30px;
+    background-color: #0066cc;
     -webkit-transition-property: background-color, left;
     transition-property: background-color, left;
     -webkit-transition-duration: 1s, 1s;
@@ -40,23 +44,23 @@ body {
     transition-timing-function: ease-out, cubic-bezier(.80, .1, .12, 1);
 }
 
-.nav-item-transition:hover {
-    left: 30px;
-    background-color: #0066cc;
+#green:active,
+#red:active,
+#yellow:active,
+#blue:active {
+    -webkit-transition: width height 1s ease-in-out;
+    transition: width height 1s ease-in-out;
+    width: 260px;
+    height: 260px;
 }
 
-#topleft:hover,
-#topright:hover,
-#bottomleft:hover,
-#bottomright:hover {
-    border: 2px solid black;
-}
-
-/*------------------------------------------ Simon Game/  */
+/*------------------------------------------ Simon Game               */
 
 .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 20%;
-    height: 20%;
 }
 
 .toggle {
@@ -65,68 +69,71 @@ body {
 }
 
 .button {
-    border-radius: 50% !important;
+    border-radius: 50%;
     font-size: 1.5em;
-    font-family: cursive;
+    font-family: 'Baloo Bhai', cursive;
     background-color: lightgray;
+    border: 2px solid;
 }
 
 #switches {
     position: absolute;
     margin-left: 26px;
     margin-top: 110px;
+    border-radius: 20px;
 }
 
 .text2 {
     text-align: center;
-    font-family: cursive;
+    font-family: 'Baloo Bhai', cursive;
 }
 
 .text1 {
     position: absolute;
-    font-family: cursive;
+    font-family: 'Baloo Bhai', cursive;
     margin-left: 19px;
     margin-top: 142px;
 }
 
 .text1 span:last-child {
-    padding-left: 70px;
+    padding-left: 90px;
 }
 
-#title {
+#name {
     position: absolute;
     font-size: 40px;
-    font-family: cursive;
-    margin-left: 35px;
+    font-family: 'Baloo Bhai', cursive;
+    margin-left: 50px;
     margin-top: 40px;
+    color: black;
 }
 
 #turn {
     background: #330000;
     color: red;
     font-size: 20px;
-    font-family: cursive;
-    width: 80px;
+    font-family: 'Baloo Bhai', cursive;
+    width: 100px;
     margin-top: 20px;
     text-align: center;
     vertical-align: middle;
     line-height: 30px;
+    border: 5px solid;
 }
 
 #outer-circle {
-    background: #385a94;
+    background: black;
     border-radius: 50%;
-    height: 500px;
-    width: 500px;
+    height: 550px;
+    width: 550px;
     position: relative;
-    border-style: solid;
-    border-width: 10px;
+    border: 10px solid black;
     margin: auto;
     margin-top: 60px;
     box-shadow: 8px 8px 15px 5px #888888;
 }
 
-#topleft {
+#green {
     position: absolute;
     height: 250px;
     width: 250px;
@@ -135,11 +142,11 @@ body {
     top: 50%;
     left: 50%;
     margin: -250px 0px 0px -250px;
-    border-style: solid;
+    border: 10px solid black;
     box-sizing: border-box;
 }
 
-#topright {
+#red {
     position: absolute;
     height: 250px;
     width: 250px;
@@ -148,11 +155,11 @@ body {
     top: 50%;
     left: 50%;
     margin: -250px 0px 0px 0px;
-    border-style: solid;
+    border: 10px solid black;
     box-sizing: border-box;
 }
 
-#bottomleft {
+#yellow {
     position: absolute;
     height: 250px;
     width: 250px;
@@ -161,11 +168,11 @@ body {
     top: 50%;
     left: 50%;
     margin: 0px -250px 0px -250px;
-    border-style: solid;
+    border: 10px solid black;
     box-sizing: border-box;
 }
 
-#bottomright {
+#blue {
     position: absolute;
     height: 250px;
     width: 250px;
@@ -174,24 +181,20 @@ body {
     top: 50%;
     left: 50%;
     margin: 0px 0px -250px 0px;
-    border-style: solid;
+    border: 10px solid black;
     box-sizing: border-box;
 }
 
 #inner-circle {
     position: absolute;
     font-family: cursive;
-    background: grey;
+    background: silver;
     border-radius: 50%;
     height: 250px;
     width: 250px;
-    border-style: solid;
-    border-width: 10px;
+    border: 10px solid black;
     top: 50%;
     left: 50%;
     margin: -125px 0px 0px -125px;
     box-sizing: border-box;
 }
-
-
-

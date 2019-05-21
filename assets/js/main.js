@@ -1,3 +1,5 @@
+/*------------------------------------------ Const's & Vars/Let's  */
+
 let order = [];
 let playerOrder = [];
 let flash;
@@ -11,13 +13,15 @@ let on = false;
 let win;
 
 const turnCounter = document.querySelector("#turn");
-const topLeft = document.querySelector("#topleft");
-const topRight = document.querySelector("#topright");
-const bottomLeft = document.querySelector("#bottomleft");
-const bottomRight = document.querySelector("#bottomright");
+const green = document.querySelector("#green");
+const red = document.querySelector("#red");
+const yellow = document.querySelector("#yellow");
+const blue = document.querySelector("#blue");
 const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
+
+/*------------------------------------------ Events for On, Strict mode and win  */
 
 strictButton.addEventListener("click", (event) => {
     if (strictButton.checked == true) {
@@ -46,6 +50,8 @@ startButton.addEventListener("click", (event) => {
         play();
     }
 });
+
+/*------------------------------------------ Functions For Game  */
 
 function play() {
     win = false;
@@ -92,7 +98,7 @@ function one() {
     audio.play();
   }
   noise = true;
-  topLeft.style.backgroundColor = "#66ff99";
+  green.style.backgroundColor = "#66ff99";
 }
 
 function two() {
@@ -101,7 +107,7 @@ function two() {
     audio.play();
   }
   noise = true;
-  topRight.style.backgroundColor = "#ff8080";
+  red.style.backgroundColor = "#ff8080";
 }
 
 function three() {
@@ -110,7 +116,7 @@ function three() {
     audio.play();
   }
   noise = true;
-  bottomLeft.style.backgroundColor = "#ffff80";
+  yellow.style.backgroundColor = "#ffff80";
 }
 
 function four() {
@@ -119,24 +125,26 @@ function four() {
     audio.play();
   }
   noise = true;
-  bottomRight.style.backgroundColor = "#8080ff";
+  blue.style.backgroundColor = "#8080ff";
 }
 
 function clearColor() {
-  topLeft.style.backgroundColor = "#009933"; // Green
-  topRight.style.backgroundColor = "#990000"; // Red
-  bottomLeft.style.backgroundColor = "#999900"; // Yellow
-  bottomRight.style.backgroundColor = "#000099"; // Blue
+  green.style.backgroundColor = "#009933"; // Green
+  red.style.backgroundColor = "#990000"; // Red
+  yellow.style.backgroundColor = "#999900"; // Yellow
+  blue.style.backgroundColor = "#000099"; // Blue
 }
 
 function flashColor() {
-  topLeft.style.backgroundColor = "#66ff99"; //Light Green
-  topRight.style.backgroundColor = "#ff8080"; // Light Red
-  bottomLeft.style.backgroundColor = "#ffff80"; // Light Yellow
-  bottomRight.style.backgroundColor = "#8080ff"; // Light Blue
+  green.style.backgroundColor = "#66ff99"; //Light Green
+  red.style.backgroundColor = "#ff8080"; // Light Red
+  yellow.style.backgroundColor = "#ffff80"; // Light Yellow
+  blue.style.backgroundColor = "#8080ff"; // Light Blue
 }
 
-topLeft.addEventListener('click', (event) => {
+/*------------------------------------------ Event Listeners  */
+
+green.addEventListener('click', (event) => {
   if (on) {
     playerOrder.push(1);
     check();
@@ -149,7 +157,7 @@ topLeft.addEventListener('click', (event) => {
   }
 })
 
-topRight.addEventListener('click', (event) => {
+red.addEventListener('click', (event) => {
   if (on) {
     playerOrder.push(2);
     check();
@@ -162,7 +170,7 @@ topRight.addEventListener('click', (event) => {
   }
 })
 
-bottomLeft.addEventListener('click', (event) => {
+yellow.addEventListener('click', (event) => {
   if (on) {
     playerOrder.push(3);
     check();
@@ -175,7 +183,7 @@ bottomLeft.addEventListener('click', (event) => {
   }
 })
 
-bottomRight.addEventListener('click', (event) => {
+blue.addEventListener('click', (event) => {
   if (on) {
     playerOrder.push(4);
     check();
@@ -187,6 +195,8 @@ bottomRight.addEventListener('click', (event) => {
     }
   }
 })
+
+/*------------------------------------------ Win state  */
 
 function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])

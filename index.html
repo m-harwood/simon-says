@@ -16,22 +16,21 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
-
-
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
 
 	<!---------------------------Audio--------------------------------->
 
 	<audio id="clip1">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+  	<source src="/assets/sounds/simonSound1.mp3"></source>
   	</audio>
 	<audio id="clip2">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+  	<source src="/assets/sounds/simonSound2.mp3"></source>
   	</audio>
 	<audio id="clip3">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+  	<source src="/assets/sounds/simonSound3.mp3"></source>
   	</audio>
 	<audio id="clip4">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+  	<source src="/assets/sounds/simonSound4.mp3"></source>
   	</audio>
 
 	<title>Simon JS</title>
@@ -42,22 +41,23 @@
 	<header>
 		<nav class="container-fluid">
 			<ul>
-				<li class="main-nav nav-item-transition"><a href="#">About</a></li>
-				<li class="main-nav nav-item-transition"><a href="https://en.wikipedia.org/wiki/Simon_(game)">Simon Wiki</a></li>
-				<li class="main-nav nav-item-transition"><a href="https://github.com/m-harwood">GitHub</a></li>
-				<li class="main-nav nav-item-transition"><a href="#">Contact</a></li>
+				<li class="main-nav nav-item-transition"><a href="https://en.m.wikipedia.org/wiki/Hasbro" target="_blank">Hasbro</a></li>
+				<li class="main-nav nav-item-transition"><a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank">Simon Wiki</a></li>
+				<li class="main-nav nav-item-transition"><a href="https://github.com/m-harwood" target="_blank">GitHub</a></li>
 			</ul>
 		</nav>
 	</header>
-
+	<div class="container-fluid">
+		<img class="logo" src="/images/hasbro.png"></img>
+	</div>
 	<div class="container-fluid">
 		<div id="outer-circle">
-			<div id="topleft"></div>
-			<div id="topright"></div>
-			<div id="bottomleft"></div>
-			<div id="bottomright"></div>
+			<div id="green"></div>
+			<div id="red"></div>
+			<div id="yellow"></div>
+			<div id="blue"></div>
 			<div id="inner-circle">
-				<div id="title" class="font-effect-emboss">SIMON!</div>
+				<div id="name" class="">SIMON!</div>
 				<div id="switches">
 					<input type="checkbox" class="toggle" id="on">
 					<button class="button" id="start">Start</button>
@@ -75,8 +75,6 @@
 				Round
 			</div>
 		</div>
-		<img class="logo" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F36%2FHasbro_4c_no_R.png%2F1200px-Hasbro_4c_no_R.png&f=1"></img>
-
 	</div>
 
 	<!---------------------------JS--------------------------------->
